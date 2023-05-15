@@ -8,7 +8,7 @@
 
 Single and multi-select server-side option list builder
 
-This package can work independently of the [Enso](https://github.com/laravel-enso/Enso) ecosystem.
+This package can work independently of the [Liberu](https://github.com/laravel-enso/Liberu) ecosystem.
 
 The front end assets that utilize this api are present in the [select](https://github.com/enso-ui/select) package.
 
