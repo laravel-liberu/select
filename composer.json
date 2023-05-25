@@ -20,9 +20,9 @@
     ],
     "require": {
         "php": ">=8.0",
-        "laravel/framework": "^9.0",
-        "laravel-liberu/filters": "^2.0",
-        "laravel-liberu/helpers": "^2.0"
+        "laravel/framework": "^9.0|^10.0",
+        "laravel-liberu/filters": "^2.1.4",
+        "laravel-liberu/helpers": "^2.9.2"
     },
     "autoload": {
         "psr-4": {
