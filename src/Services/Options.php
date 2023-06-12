@@ -26,9 +26,9 @@ class Options implements Responsable
     private Request $request;
     private Collection $selected;
     private array $value;
-    private ?string $orderBy;
+    private ?string $orderBy = null;
 
-    public function __construct(private Builder $query)
+    public function __construct(private readonly Builder $query)
     {
         $this->trackBy = Config::get('enso.select.trackBy');
         $this->queryAttributes = new Collection(Config::get('enso.select.queryAttributes'));
@@ -193,12 +193,12 @@ class Options implements Responsable
 
     private function params(): Collection
     {
-        return new Collection(json_decode($this->request->get('params'), true));
+        return new Collection(json_decode((string) $this->request->get('params'), true, 512, JSON_THROW_ON_ERROR));
     }
 
     private function pivotParams(): Collection
     {
-        return new Collection(json_decode($this->request->get('pivotParams'), true));
+        return new Collection(json_decode((string) $this->request->get('pivotParams'), true, 512, JSON_THROW_ON_ERROR));
     }
 
     private function isNested($attribute): bool
