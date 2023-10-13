@@ -30,9 +30,9 @@ class Options implements Responsable
 
     public function __construct(private readonly Builder $query)
     {
-        $this->trackBy = Config::get('enso.select.trackBy');
-        $this->queryAttributes = new Collection(Config::get('enso.select.queryAttributes'));
-        $this->searchMode = Config::get('enso.select.searchMode');
+        $this->trackBy = Config::get('liberu.select.trackBy');
+        $this->queryAttributes = new Collection(Config::get('liberu.select.queryAttributes'));
+        $this->searchMode = Config::get('liberu.select.searchMode');
         $this->resource = null;
         $this->appends = null;
     }
@@ -144,7 +144,7 @@ class Options implements Responsable
         (new Search($this->query, $this->attributes(), $search))
             ->relations($this->relations())
             ->searchMode($this->searchMode)
-            ->comparisonOperator(Config::get('enso.select.comparisonOperator'))
+            ->comparisonOperator(Config::get('liberu.select.comparisonOperator'))
             ->handle();
 
         return $this;
@@ -186,7 +186,7 @@ class Options implements Responsable
             ->toBase()
             ->merge($this->selected)
             ->when($this->orderBy !== null, fn ($results) => $results
-                ->sortBy($this->orderBy, Config::get('enso.select.sortByOptions')))
+                ->sortBy($this->orderBy, Config::get('liberu.select.sortByOptions')))
             ->values()
             ->when($this->appends, fn ($results) => $results->each->setAppends($this->appends));
     }
