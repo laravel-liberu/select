@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelEnso\Select\Services;
+namespace LaravelLiberu\Select\Services;
 
 use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Database\Eloquent\Builder;
@@ -9,8 +9,8 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
-use LaravelEnso\Filters\Services\Search;
-use LaravelEnso\Helpers\Traits\When;
+use LaravelLiberu\Filters\Services\Search;
+use LaravelLiberu\Helpers\Traits\When;
 
 class Options implements Responsable
 {

@@ -26,13 +26,13 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelEnso\\Select\\": "src/"
+            "LaravelLiberu\\Select\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelEnso\\Select\\AppServiceProvider"
+                "LaravelLiberu\\Select\\AppServiceProvider"
             ],
             "aliases": {}
         }

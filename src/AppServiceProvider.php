@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelEnso\Select;
+namespace LaravelLiberu\Select;
 
 use Illuminate\Support\ServiceProvider;
 

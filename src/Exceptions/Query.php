@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelEnso\Select\Exceptions;
+namespace LaravelLiberu\Select\Exceptions;
 
-use LaravelEnso\Helpers\Exceptions\EnsoException;
+use LaravelLiberu\Helpers\Exceptions\EnsoException;
 
 class Query extends EnsoException
 {
