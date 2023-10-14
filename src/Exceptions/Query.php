@@ -2,9 +2,9 @@
 
 namespace LaravelLiberu\Select\Exceptions;
 
-use LaravelLiberu\Helpers\Exceptions\EnsoException;
+use LaravelLiberu\Helpers\Exceptions\LiberuException;
 
-class Query extends EnsoException
+class Query extends LiberuException
 {
     public static function unknownSearchMode()
     {
